@@ -1,12 +1,5 @@
 "use strict";
 
-//Stuff to do:
-//Styling.
-//Decrement score with each wrong guess.
-//Save Score?
-
-
-
 /** Memory game: find matching pairs of cards and flip both of them. */
 
 const FOUND_MATCH_WAIT_MSECS = 1000;
@@ -18,19 +11,17 @@ let score = 100; //decrements as you guess. Determines finish message
 let scoreDisplay = document.querySelector('#score');
 let bestScore = localStorage.getItem('bestScore') || 0;
 
+/** decrements score on wrong guess and updates score display.*/
 function modifyScore(){
-  //decrements score on wrong guess and updates score display.
   score = (score > 0) ? score - 5 : 0;
   scoreDisplay.textContent = 'Score: ' + score;
 }
 
-
-function shuffle(items) {
   /** Shuffle array items in-place and return shuffled array. */
+function shuffle(items) {
+
   for (let i = items.length - 1; i > 0; i--) {
-    // generate a random index between 0 and i
     let j = Math.floor(Math.random() * i);
-    // swap item at i <-> item at j
     [items[i], items[j]] = [items[j], items[i]];
   }
 
@@ -131,8 +122,8 @@ function handleCardClick(evt) {
   checkIfDone();
 }
 
+/** check if all cards are matched, if so finish game. */
 function checkIfDone(){
-  //check if all cards are matched, if so finish game.
   let cards = document.querySelectorAll('.card');
 
   let allDone = true;
@@ -170,7 +161,7 @@ function finishGame(){
   restartButton.addEventListener('click', restartGame);
 }
 
-///Restart Game Functions
+/** Restart Game: reset score + display */
 function restartGame(){
   let finishScreen = document.querySelector('#finish');
   finishScreen.classList.add('hide');

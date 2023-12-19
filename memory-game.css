@@ -1,10 +1,10 @@
-/* you can add to or change this. */
 
 :root {
   --cream: rgb(255, 235, 205);
   --light-blue: #5f9ea0;
   --dark-red: darkred;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@ body {
   background-color: var(--cream);
   font-family: 'REM', sans-serif; /*'Sauna-Bold';*/
 }
+
 h1 {
   text-shadow: 1px 1px 1px green;
   color: var(--light-blue);
@@ -19,6 +20,7 @@ h1 {
   margin-bottom: 0px;
   font-size: 40px;
 }
+
 h2 {
   color: var(--dark-red);
   font-size: 22px;
@@ -26,6 +28,7 @@ h2 {
   margin-top: 15px;
   margin-bottom: 30px;
 }
+
 #score {
   position: fixed;
   top: 20px;
@@ -33,6 +36,7 @@ h2 {
   font-size: 1.2rem;
   font-weight: bold;
 }
+
 #game {
   width: 600px;
   height: 500px;
@@ -49,12 +53,6 @@ h2 {
   border: 3px solid rgb(92, 98, 94);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(170, 170, 170);
-
-  /*
-  width: 9vw;
-  height: 26vh;
-  margin: 6px;
-  */
 }
 
 
